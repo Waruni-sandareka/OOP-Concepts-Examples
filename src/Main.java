@@ -1,5 +1,7 @@
 import com.example.animals.Dog;
 import com.example.bank.BankAccount;
+import com.example.employees.FullTimeEmployee;
+import com.example.employees.PartTimeEmployee;
 import com.example.shapes.Circle;
 import com.example.shapes.Rectangle;
 import com.example.shapes.Shape;
@@ -17,6 +19,7 @@ public class Main {
         myDog.makeSound();
         myDog.wagTail();
 
+        System.out.println();
         System.out.println("---------Encapsulation Example---------");
 
         BankAccount myAccount = new BankAccount("John Doe", 1000.0);
@@ -32,6 +35,7 @@ public class Main {
         myAccount.setAccountHolder("Jane Doe");
         System.out.println("Updated Account Holder: " + myAccount.getAccountHolder());
 
+        System.out.println();
         System.out.println("---------Polymorphism Example---------");
 
         Shape myShape;
@@ -48,6 +52,16 @@ public class Main {
         System.out.println("Sum of two integers: " + add(5, 10));
         System.out.println("Sum of three integers: " + add(5, 10, 15));
         System.out.println("Sum of two doubles: " + add(3.5, 2.5));
+
+        System.out.println();
+        System.out.println("---------Abstraction Example---------");
+
+        FullTimeEmployee fullTimeEmployee = new FullTimeEmployee("John Doe", 101, 5000.0);
+        PartTimeEmployee partTimeEmployee = new PartTimeEmployee("Jane Smith", 102, 15.0, 20);
+
+        fullTimeEmployee.displayEmployeeInfo();
+        System.out.println();
+        partTimeEmployee.displayEmployeeInfo();
     }
 
     // Method overloading for compile-time polymorphism
@@ -62,5 +76,7 @@ public class Main {
     private static double add(double a, double b) {
         return a + b;
     }
+
+
 
 }
