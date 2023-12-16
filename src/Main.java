@@ -2,6 +2,8 @@ import com.example.animals.Dog;
 import com.example.bank.BankAccount;
 import com.example.employees.FullTimeEmployee;
 import com.example.employees.PartTimeEmployee;
+import com.example.interfaces.Developer;
+import com.example.interfaces.Manager;
 import com.example.shapes.Circle;
 import com.example.shapes.Rectangle;
 import com.example.shapes.Shape;
@@ -62,6 +64,19 @@ public class Main {
         fullTimeEmployee.displayEmployeeInfo();
         System.out.println();
         partTimeEmployee.displayEmployeeInfo();
+
+
+        System.out.println();  // Add a line break
+        System.out.println("---------Abstraction Example using Interface---------");
+
+        // Create instances of Manager and Developer
+        Manager manager = new Manager("John Manager", 50000, 15);
+        Developer developer = new Developer("Alice Developer", 60000, 3);
+
+        // Display information for Manager and Developer
+        manager.displayInfo();
+        System.out.println();  // Add a line break
+        developer.displayInfo();
     }
 
     // Method overloading for compile-time polymorphism
