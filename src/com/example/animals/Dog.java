@@ -1,3 +1,7 @@
+package com.example.animals;
+
+import com.example.animals.Animal;
+
 public class Dog extends Animal {
     public String breed;
 

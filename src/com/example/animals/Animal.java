@@ -1,3 +1,5 @@
+package com.example.animals;
+
 public class Animal {
     public String species;
 
