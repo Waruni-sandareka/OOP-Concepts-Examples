@@ -1,5 +1,8 @@
 import com.example.animals.Dog;
 import com.example.bank.BankAccount;
+import com.example.shapes.Circle;
+import com.example.shapes.Rectangle;
+import com.example.shapes.Shape;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,5 +31,36 @@ public class Main {
         // Using the setter method to update the account holder's name
         myAccount.setAccountHolder("Jane Doe");
         System.out.println("Updated Account Holder: " + myAccount.getAccountHolder());
+
+        System.out.println("---------Polymorphism Example---------");
+
+        Shape myShape;
+
+        myShape = new Circle(5.0);
+        myShape.draw();
+        System.out.println("Area: " + myShape.calculateArea());
+
+        myShape = new Rectangle(4.0, 6.0);
+        myShape.draw();
+        System.out.println("Area: " + myShape.calculateArea());
+
+        // Polymorphism with method overloading (compile-time polymorphism)
+        System.out.println("Sum of two integers: " + add(5, 10));
+        System.out.println("Sum of three integers: " + add(5, 10, 15));
+        System.out.println("Sum of two doubles: " + add(3.5, 2.5));
     }
+
+    // Method overloading for compile-time polymorphism
+    private static int add(int a, int b) {
+        return a + b;
+    }
+
+    private static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    private static double add(double a, double b) {
+        return a + b;
+    }
+
 }
